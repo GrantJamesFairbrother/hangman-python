@@ -7,7 +7,7 @@ lives = 6
 # Generate a random number to get a
 # random word from the list
 random.seed()
-random_word = random.randint(0, 1)
+random_word = random.randint(0, 29)
 word = (generate_word_list()[random_word]).lower()
 
 guess_letter_position = list('_'*len(word))
@@ -36,7 +36,7 @@ while (lives > 0):
         elif lives == 1:
             print("Only {} life left".format(lives))
         else:
-            print("Game Over!")
+            print("Game Over! The word was: {}".format(word))
             break
     if "".join(guess_letter_position) == word:
         print("Congratulations!!")
